@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
+const cookieParser = require('cookie-parser');
 //setup port
 const port = 8000;
 
@@ -10,13 +11,16 @@ app.use(express.static('./assets'))
 //setup express layouts
 app.use(expressLayouts);
 
+app.use(cookieParser());
+
+app.use(express.urlencoded());
+
 //put scripts and styles from pages to layout
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
 //setup express router
-app.use('/', require('./routes/home_router.js'));
-app.use('/user/', require('./routes/users_router.js'));
+app.use('/', require('./routes/index_router.js'));
 
 //setup the view engine
 app.set('view engine', 'ejs');

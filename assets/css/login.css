@@ -1,0 +1,30 @@
+div{
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  padding: 10px 30px 30px;
+  background-color: #040D12;
+  border: 0px solid #D8D9DA;
+  width: 25%;
+  border-radius: 10px;  
+}
+
+input{
+  padding: 8px 16px;
+  border: 0px solide red;
+  border-radius: 5px;
+  width: 90%;
+  box-shadow: 0px;
+}
+
+button{
+  padding: 8px;
+  border: 0px solide red;
+  border-radius: 5px;
+  width: 25%;
+  box-shadow: 0px;
+  margin-top: 1.2rem;
+  background-color: #FFF6E0;
+}
