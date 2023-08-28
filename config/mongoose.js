@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 //connect to database
 async function main() {
-    const db = await mongoose.connect(`mongodb://127.0.0.1:27017/${env.db}`);
+    const db = await mongoose.connect(`mongodb://127.0.0.1:27017/codial_development`);
     module.exports = db;
 }
 
