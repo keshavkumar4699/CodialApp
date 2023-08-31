@@ -1,11 +1,12 @@
-// Declare mongoose as global
-global.mongoose = require('mongoose');
+//require library
+const mongoose = require('mongoose');
 
-// In Separate file
-const url = "mongodb://0.0.0.0:27017/codial_development";
+//connect to database
+async function main() {
+    const db = await mongoose.connect(`mongodb://127.0.0.1:27017/codial_development`);
+    module.exports = db;
+}
 
-//BUILD A CONNECTION
-mongoose.connect(url).then(() => { console.log('Connected To database :)')})
-.catch( err => console.log('error', err));
-
-module.exports.mongoose = mongoose;
+main()
+.then(() => console.log('MongoDB Connected...')) //if connected
+.catch(err => console.log(err)); //if error
