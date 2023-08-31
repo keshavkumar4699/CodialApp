@@ -2,6 +2,11 @@ const express = require('express');
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
+const db = require('./config/mongoose')
+const session = require('express-session');
+const passport = require('passport');
+const passportLocal = require('./config/passport-local-strategy');
+
 //setup port
 const port = 8000;
 
@@ -19,12 +24,26 @@ app.use(express.urlencoded());
 app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 
-//setup express router
-app.use('/', require('./routes/index_router.js'));
-
 //setup the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+//setup session
+app.use(session({
+    name: 'codial',
+    secret: 'some secret',
+    resave: false,
+    saveUninitialized: false,
+    cookie:{
+        maxAge: (1000*60*100)
+    }
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+//setup express router
+app.use('/', require('./routes/index_router.js'));
 
 //listener to the defined port
 app.listen(port, (err)=>{

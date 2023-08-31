@@ -4,7 +4,7 @@ const passport = require('passport');
 
 const userController = require('../controllers/user_controller');
 
-router.get('/login/', userController.login);
+router.get('/login', userController.login);
 router.get('/signup', userController.signup);
 router.get('/profile', userController.profile);
 router.post('/create', userController.create);
@@ -13,7 +13,8 @@ router.post('/create', userController.create);
 router.post('/create-session', passport.authenticate(
   'local',{
     failureRedirect: '/user/login',
-    failureMessage: "Unable to authenticate" 
+    failureMessage: "Unable to authenticate",
+    session: true 
 }),userController.creatSession);
 
 module.exports = router;
