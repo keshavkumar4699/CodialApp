@@ -43,5 +43,5 @@ module.exports.create = function (req, res) {
 };
 
 module.exports.creatSession = function (req, res) {
-  //to do
+  return res.redirect('/user/profile');
 };
