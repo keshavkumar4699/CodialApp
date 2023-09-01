@@ -1,6 +1,13 @@
+const Post = require('../models/post')
 
 module.exports.home = function (req, res) {
-  return res.render("home.ejs", {
-    title: "Home",
-  });
+  Post.find().populate('user')
+  .then((posts)=>{
+    return res.render('home',{
+      title: "Codial|Home",
+      posts: posts
+    })
+  })
+  .catch((err)=>{
+  })
 };

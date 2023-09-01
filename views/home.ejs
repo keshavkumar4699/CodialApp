@@ -6,6 +6,18 @@
         <textarea name="content" cols="30" rows="3"></textarea>
         <input type="submit" value="Post">
     </form>
+    <div>
+        <ul>
+            <%for(post of posts){%>
+            <li>
+                <p>
+                    <%=post.content%>
+                    <%=post.user.name%>
+                </p>
+            </li>
+            <%}%>
+        </ul>
+    </div>
 </section>
 
 <script src="/js/home.js"></script>
