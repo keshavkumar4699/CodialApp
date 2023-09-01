@@ -1,13 +1,11 @@
 <link rel="stylesheet" href="/css/home.css">
 
-<h2>WELCOME TO CODIAL A NEW WAY OF CONNECTING PEOPLE</h2>
-
-<div>
-    <h3>CODIAL</h3>
-    <h5>This is new way of connecting people</h5>
-    <p> If you have already signed up please login or else continue with Sign up</p>
-    <button id="login-button">Login</button>
-    <button id="signup-button">SignUP</button>
-</div>
+<section id="feed-posts">
+    <h4>Posts</h4>
+    <form action="/posts/create" id="newPost" method="post">
+        <textarea name="content" cols="30" rows="3"></textarea>
+        <input type="submit" value="Post">
+    </form>
+</section>
 
 <script src="/js/home.js"></script>

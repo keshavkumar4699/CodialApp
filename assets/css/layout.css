@@ -7,5 +7,8 @@ body {
   background-color: #272829;
   color: #F4EEEE;
 }
+body #main-body {
+  min-height: 90vh;
+}
 
 /*# sourceMappingURL=layout.css.map */
