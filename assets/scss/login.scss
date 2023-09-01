@@ -1,17 +1,17 @@
-div {
+div{
   display: flex;
   justify-content: center;
 }
 
-form {
+form{
   padding: 10px 30px 30px;
   background-color: #040D12;
   border: 0px solid #D8D9DA;
   width: 25%;
-  border-radius: 10px;
+  border-radius: 10px;  
 }
 
-input {
+input{
   padding: 8px 16px;
   border: 0px solide red;
   border-radius: 5px;
@@ -19,7 +19,7 @@ input {
   box-shadow: 0px;
 }
 
-button {
+button{
   padding: 8px;
   border: 0px solide red;
   border-radius: 5px;
@@ -28,5 +28,3 @@ button {
   margin-top: 1.2rem;
   background-color: #FFF6E0;
 }
-
-/*# sourceMappingURL=signup.css.map */
