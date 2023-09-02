@@ -1,0 +1,21 @@
+header {
+  background-color: rgb(57, 57, 57);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0px 10px;
+}
+header div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: bisque;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/*# sourceMappingURL=header.css.map */

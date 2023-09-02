@@ -1,0 +1,24 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  background-image: linear-gradient(90deg, rgb(26, 26, 26), rgb(45, 45, 45));
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 20px;
+}
+footer div p {
+  margin: 0px;
+}
+footer div a {
+  color: bisque;
+  text-transform: none;
+}
+
+/*# sourceMappingURL=footer.css.map */

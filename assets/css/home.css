@@ -1,6 +1,68 @@
-button{
+section {
+  margin: 10px 20px;
+}
+section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+section textarea {
+  padding: 10px 15px;
+  background-color: bisque;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+section input {
   padding: 10px 15px;
   background-color: bisque;
   border: 0px;
   border-radius: 5px;
 }
+section h4 {
+  text-align: left;
+}
+section div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+section div ul li {
+  border-radius: 10px;
+  text-align: start;
+  padding: 10px;
+  background-color: #352F44;
+  overflow: auto;
+}
+section div ul li p {
+  text-align: end;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*# sourceMappingURL=home.css.map */

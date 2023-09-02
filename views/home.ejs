@@ -1,13 +1,35 @@
 <link rel="stylesheet" href="/css/home.css">
 
-<h2>WELCOME TO CODIAL A NEW WAY OF CONNECTING PEOPLE</h2>
-
-<div>
-    <h3>CODIAL</h3>
-    <h5>This is new way of connecting people</h5>
-    <p> If you have already signed up please login or else continue with Sign up</p>
-    <button id="login-button">Login</button>
-    <button id="signup-button">SignUP</button>
-</div>
+<section id="feed-posts">
+    <%if(locals.user){%>
+        <form action="/posts/create" id="newPost" method="post">
+            <textarea name="content" cols="40" rows="3"></textarea>
+            <input type="submit" value="Post">
+        </form>
+    <%}%>
+    <h4>Recent Posts</h4>
+    <div>
+        <ul>
+            <%for(post of posts){%>
+                <li>
+                    <p>
+                        <%=post.content%>
+                            <p>- <%=post.user.name%>
+                            </p>
+                    </p>
+                    <div class="post-comment">
+                        <%if(locals.user){%>
+                            <form action="/comments/create" method="post">
+                                <input type="text" name="content" placeholder="Type here to post comment..">
+                                <input type="hidden" name="post" value="<%=post._id%>">
+                                <input type="submit" value="Add comment">
+                            </form>
+                        <%}%>
+                    </div>
+                </li>
+            <%}%>
+        </ul>
+    </div>
+</section>
 
 <script src="/js/home.js"></script>
