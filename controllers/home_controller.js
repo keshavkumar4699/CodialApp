@@ -1,13 +1,24 @@
-const Post = require('../models/post')
+const Post = require("../models/post");
+const User = require("../models/user");
 
 module.exports.home = function (req, res) {
-  Post.find().populate('user')
-  .then((posts)=>{
-    return res.render('home',{
-      title: "Codial|Home",
-      posts: posts
+  Post.find()
+    .populate("user")
+    .populate({
+      path: "comments",
+      populate: {
+        path: "user",
+      },
     })
-  })
-  .catch((err)=>{
-  })
+    .then((posts) => {
+      User.find()
+      .then((users)=>{
+        return res.render("home", {
+          title: "Codial|Home",
+          posts: posts,
+          all_users: users
+        });
+      })
+    })
+    .catch((err) => {});
 };

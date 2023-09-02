@@ -1,54 +1,87 @@
 $primaryColor: bisque;
 $secondryColor: #352F44;
-section{
-  margin: 10px 20px;
-  form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 20px;
-  }
-  textarea{
-    padding: 10px 15px;
-    background-color: $primaryColor;
-    border-radius: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  input{
-    padding: 10px 15px;
-    background-color: $primaryColor;
-    border: 0px;
-    border-radius: 5px;
-  }
 
-  h4{
-    text-align: left;
-  }
+div{
+  display: flex;
+  flex-direction: row;
 
-  div{
-    
-    ul{
+  #feed-posts{
+    width: 80%;
+    margin: 10px 20px;
+    form{
       display: flex;
       flex-direction: column;
-      gap:10px;
-      list-style: none;
-      padding: 0;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+    textarea{
+      padding: 10px 15px;
+      background-color: $primaryColor;
+      border-radius: 5px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    input{
+      padding: 10px 15px;
+      background-color: $primaryColor;
+      border: 0px;
+      border-radius: 5px;
+    }
+  
+    h4{
+      text-align: left;
+    }
+  
+    div{
       
-      li{
-        border-radius: 10px;
-        text-align: start;
-        padding: 10px;
-        background-color: $secondryColor;
-        overflow: auto;
-
-        p{
-          text-align: end;
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        list-style: none;
+        padding: 0;
+        
+        li{
+          border-radius: 10px;
+          text-align: start;
+          padding: 10px;
+          background-color: $secondryColor;
+          overflow: auto;
+          p{
+            text-align: end;
+          }
         }
       }
     }
   }
+  #user-friends{
+    width: 20%;
+    // border: 2px solid red;
+    margin: 0px 10px 0px 10px;
+    background-color: rgb(57, 57, 57);
+  }
+}
+
+#post-comment{
+  display: flex;
+  flex-direction: column;
+  div{
+    ul{
+      width: 100%;
+      li{
+        border: 2px solid red;
+        p{
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+#post-content{
+  margin-bottom: 10px;
+
 }
 
 /* width */
