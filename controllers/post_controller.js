@@ -7,7 +7,7 @@ module.exports.create = function (req, res) {
   })
     .then((result) => {
       console.log("new post added");
-      req.redirect("/");
+      res.redirect("/");
     })
     .catch((err) => {
       console.log("error in posting new post", err);
