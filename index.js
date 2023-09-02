@@ -37,7 +37,7 @@ app.use(
     secret: "random",
     saveUninitialized: "false",
     cookie: {
-      maxAge: 100 * 60 * 100,
+      maxAge: 1000 * 60 * 100,
     },
     store: MongoStore.create(
         {
