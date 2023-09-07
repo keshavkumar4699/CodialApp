@@ -14,13 +14,13 @@ passport.use(
       User.findOne({ email: email })
         .then((user) => {
           if (!user || user.password != password) {
-            console.log("Invalid Username/Password");
+            req.flash('error', 'Invalid Username/Password');
             return done(null, false);
           }
           return done(null, user);
         })
         .catch((err) => {
-          console.log("Error in finding user----> Passport");
+          req.flash('error', err);
           return done(err);
         });
     }

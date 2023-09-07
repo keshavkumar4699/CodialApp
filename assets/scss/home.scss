@@ -60,6 +60,20 @@ div{
     // border: 2px solid red;
     margin: 0px 10px 0px 10px;
     background-color: rgb(57, 57, 57);
+    p{
+      padding: 5px 0px;
+      margin: 10px 10px;
+      border-radius: 5px;
+      background-color: gray;
+      a{
+        text-decoration: none;
+        text-transform: capitalize;
+        color: chartreuse;
+      }
+    }
+    p:hover{
+      background-color: black;
+    }
   }
 }
 
@@ -95,7 +109,7 @@ div{
   background: gray; 
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: darkgray; 

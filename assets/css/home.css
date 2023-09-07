@@ -51,6 +51,20 @@ div #user-friends {
   margin: 0px 10px 0px 10px;
   background-color: rgb(57, 57, 57);
 }
+div #user-friends p {
+  padding: 5px 0px;
+  margin: 10px 10px;
+  border-radius: 5px;
+  background-color: gray;
+}
+div #user-friends p a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: chartreuse;
+}
+div #user-friends p:hover {
+  background-color: black;
+}
 
 #post-comment {
   display: flex;
@@ -91,6 +105,4 @@ div #user-friends {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */
