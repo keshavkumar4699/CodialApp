@@ -15,6 +15,8 @@ const port = 8000;
 
 //setup static files folder
 app.use(express.static("./assets"));
+//make the uploads path available to the browser
+app.use('/uploads', express.static(__dirname+'/uploads'));
 
 //setup express layouts
 app.use(expressLayouts);

@@ -1,10 +1,14 @@
-<h1> User Profile </h1>
+<link rel="stylesheet" href="/css/profile.css">
 
+<img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
 <%if(profile_user.id==user.id){%>
   <!-- if user matches then show the form -->
-  <form action="/user/update/<%=profile_user.id%>" method="post">
+  <!-- This form is not accessible as parser doen't parse multipart form that's why we use multer -->
+  <form action="/user/update/<%=profile_user.id%>" enctype="multipart/form-data" method="post">
     <input type="text" name="name" placeholder="Your Name" value="<%=profile_user.name%>">
     <input type="email" name="email" placeholder="Your Email" value="<%=profile_user.email%>">
+    
+    <input type="file" name="avatar" placeholder="Profile Picture">
     <input type="submit" value="Update">
   </form>
 <%}else{%>
