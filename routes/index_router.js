@@ -8,6 +8,7 @@ router.use('/user', require('./users_router.js'));
 router.use('/posts', require('./post_router.js'));
 router.use('/comments', require('./comment_router.js'));
 
+router.use('/api', require('./api/index_api'));
 //for any further routes, access from here
 //router.use('/routerName', require('./routerfile'));
 
